@@ -1,4 +1,4 @@
-% This work © 2023 by Tanaboon Tongbuasirilai is licensed under CC BY-NC-SA 4.0 
+% This work © 2023 by Ehsan Miandji is licensed under CC BY-NC-SA 4.0 
 function [c_r, c_g, c_b] = solver_L2(Qhat, k, r_sp, g_sp, b_sp, eta)
     fprintf('solving coefficients with L2 : k = %d...\n', k);
     

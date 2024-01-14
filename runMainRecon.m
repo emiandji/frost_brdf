@@ -1,4 +1,4 @@
-% This work © 2023 by Tanaboon Tongbuasirilai is licensed under CC BY-NC-SA 4.0 
+% This work © 2023 by Ehsan Miandji is licensed under CC BY-NC-SA 4.0 
 %% test reconstruction by sampling from a material 
 clear; clc; 
 % load up files

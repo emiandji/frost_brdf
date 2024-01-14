@@ -1,4 +1,4 @@
-% This work © 2023 by Tanaboon Tongbuasirilai is licensed under CC BY-NC-SA 4.0 
+% This work © 2023 by Ehsan Miandji is licensed under CC BY-NC-SA 4.0 
 %% Create transformed data for training
 clear
 clc
