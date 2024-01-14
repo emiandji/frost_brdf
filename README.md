@@ -1,6 +1,8 @@
 # frost_brdf
 Source code for the following paper:
-E. Miandji et al., "FROST-BRDF: A Fast and Robust Optimal Sampling Technique for BRDF Acquisition", IEEE Transactions on Visualization and Computer Graphics, 2024. 
+E. Miandji, T. Tongbuasirilai, S. Hajisharif, B. Kavoosighafi, and J. Unger, "FROST-BRDF: A Fast and Robust Optimal Sampling Technique for BRDF Acquisition", IEEE Transactions on Visualization and Computer Graphics, accepted for publication, 2024. 
+
+The source code is a collection of MATLAB scripts and was tested on MATLAB R2022b. 
 
 To reproduce the results in the paper, run the following scripts (in order):
 - createTrainingData.m
