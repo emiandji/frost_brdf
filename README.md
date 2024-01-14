@@ -23,7 +23,7 @@ BRDFs used for testing are placed in directory "BRDFs_MAT".
 For inquiries, please contact:
 
 ehsan.miandji@liu.se or
-tanaboon891@gmail.com
+tanaboon.to@ku.th
 
 
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
