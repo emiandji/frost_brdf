@@ -18,7 +18,7 @@ The scripts above will create a set of optimal sampling directions given the tra
 
 Since the training is done once, the scripts createTrainingData.m, createUSVfromTrainingData.m, and runMainOptimization.m are executed once. The reconstruction script, i.e. runMainRecon.m, reconstructs one BRDF at a time. Therefore, lines 15 and 17 in runMainRecon.m should be changed for each BRDF you would like to reconstruct. 
 
-The scripts provided can be used for reproducing all the figures in the paper and also in the supplementary. The only parameter is the number of samples, i.e. "npca" in line 5 of "runMainOptimization.m". In the paper, this parameter is denoted by _m_. Change this parameter accordingly for each experiment. For example, for Fig. 4 we used npca=10, while for Fig. 8 we used npca=20. 
+The scripts provided can be used for reproducing all the figures in the paper and also in the supplementary. The only parameter is the number of samples, i.e. "npca" in line 5 of "runMainOptimization.m". In the paper, this parameter is denoted by _m_. Change this parameter accordingly for each experiment. For example, for Fig. 4 we used npca=10, while for Fig. 8 we used npca=20. Note that when the number of samples changes, the optimal sample direction have to be recomputed; i.e. one has to run "createUSVfromTrainingData.m" and "runMainOptimization.m".
 
 Note that this repository does not include the rendering code. We used PBRT v2 to produce the rendering results in the paper. The convenience functions "merlWriter.m" and "reshape2merlwriter.m" can be used for writing MERL binary files from the reconstructed BRDF to be used by PBRT for rendering. 
 
