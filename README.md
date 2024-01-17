@@ -2,6 +2,10 @@
 Source code for the following paper:
 E. Miandji, T. Tongbuasirilai, S. Hajisharif, B. Kavoosighafi, and J. Unger, "FROST-BRDF: A Fast and Robust Optimal Sampling Technique for BRDF Acquisition", IEEE Transactions on Visualization and Computer Graphics, accepted for publication, 2024. 
 
+-----------------------------------------------------------------------------------------------------
+
+Code:
+
 The source code is a collection of MATLAB scripts and was tested on MATLAB R2022b. 
 
 To reproduce the results in the paper, run the following scripts (in order):
@@ -11,9 +15,18 @@ To reproduce the results in the paper, run the following scripts (in order):
 - runMainRecon.m
 
 The scripts above will create a set of optimal sampling directions given the tranining set, sample a BRDF in the test set using the optimal sample direction, and reconstruct the full BRDF from the samples. 
+
+Since the training is done once, the scripts createTrainingData.m, createUSVfromTrainingData.m, and runMainOptimization.m are executed once. The reconstruction script, i.e. runMainRecon.m, reconstructs one BRDF at a time. Therefore, lines 15 and 17 in runMainRecon.m should be changed for each BRDF you would like to reconstruct. 
+
+The scripts provided can be used for reproducing all the figures in the paper and also in the supplementary. The only parameter is the number of samples, i.e. "npca" in line 5 of "runMainOptimization.m". In the paper, this parameter is denoted by _m_. Change this parameter accordingly for each experiment. For example, for Fig. 4 we used npca=10, while for Fig. 8 we used npca=20. 
+
 Note that this repository does not include the rendering code. We used PBRT v2 to produce the rendering results in the paper. The convenience functions "merlWriter.m" and "reshape2merlwriter.m" can be used for writing MERL binary files from the reconstructed BRDF to be used by PBRT for rendering. 
 
-The BRDFs we used for training and testing in the paper can be downloaded from:
+-----------------------------------------------------------------------------------------------------
+
+Data: 
+
+The BRDFs we used for training and testing in the paper can be downloaded from
 
 https://drive.google.com/file/d/18j-I-JkJAFaUyDtHnsaOBsQav1gPTPY8/view?usp=sharing
 
@@ -23,9 +36,7 @@ The folder "BRDFs_Mat_for_train" contains training BRDFs.
 
 The folder "BRDFs_MAT" contains test BRDFs. 
 
-Since the training is done once, the scripts createTrainingData.m, createUSVfromTrainingData.m, and runMainOptimization.m are executed once. The reconstruction script, i.e. runMainRecon.m, reconstructs one BRDF at a time. Therefore, lines 15 and 17 should be changed for each BRDF you would like to reconstruct. 
-
-The scripts provided can be used for replicating all the figures in the paper and also the supplementary. 
+-----------------------------------------------------------------------------------------------------
 
 For inquiries, please contact:
 
