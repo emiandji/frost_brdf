@@ -38,6 +38,19 @@ The folder "BRDFs_MAT" contains test BRDFs.
 
 -----------------------------------------------------------------------------------------------------
 
+Example:
+
+To reproduce the FROST-BRDF result in Fig. 4, follow these steps:
+
+1. In "runMainOptimization.m", change "npca=20" to "npca=10".
+2. In "runMainRecon.m", change line 15 to "matname = 'vch-silk-blue-rgb';".
+3. In "runMainRecon.m", change line 17 to "binpath = './BRDFs_Mat/EPFL/HD/no_transform';".
+4. Run the scripts in the order specified above (in section "Code").
+
+For more sophisticated figures, e.g. Figure 3, one has to write loops to run FROST-BRDF for all test BRDFs and number of samples.
+
+-----------------------------------------------------------------------------------------------------
+
 For inquiries, please contact:
 
 ehsan.miandji@liu.se or
