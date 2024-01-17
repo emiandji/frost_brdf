@@ -22,5 +22,5 @@ X(nanpermute.nanIds,:) = [];    % invalid angles
 disp('done pca... saving data...');
 clear X
 
-save(sprintf('%sUSV_n%d.mat', data_dir, samples), 'U', 'S', 'V', '-v7.3');
+save(sprintf('%sUSV.mat', data_dir, samples), 'U', 'S', 'V', '-v7.3');
 disp('done saving...');
