@@ -52,6 +52,13 @@ To reproduce the FROST-BRDF result in Fig. 4, follow these steps:
 
 For more sophisticated figures, e.g. Figure 3, one has to write loops to run FROST-BRDF for all test BRDFs and number of samples.
 
+We also provide an example of a PBRT file.
+The 'test.pbrt' will generate an output file, 'test.exr'.
+The required directories are as follows.
+- 'exr' : to hold the rendered output.
+- 'brdf' : to put the reconstructed binary from FROST.
+- 'textures' : to put the environment map, 'grace_latlong_pbrt.exr'
+
 -----------------------------------------------------------------------------------------------------
 
 For inquiries, please contact:
