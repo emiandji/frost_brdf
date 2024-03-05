@@ -16,7 +16,10 @@ To reproduce the results in the paper, run the following scripts (in order):
 
 The scripts above will create a set of optimal sampling directions given the tranining set, sample a BRDF in the test set using the optimal sample direction, and reconstruct the full BRDF from the samples. 
 
-Since the training is done once, the scripts createTrainingData.m, createUSVfromTrainingData.m, and runMainOptimization.m are executed once. The reconstruction script, i.e. runMainRecon.m, reconstructs one BRDF at a time. Therefore, lines 15 and 17 in runMainRecon.m should be changed for each BRDF you would like to reconstruct. 
+Since the training is done once, the scripts createTrainingData.m, createUSVfromTrainingData.m, and runMainOptimization.m are executed once. 
+
+The reconstruction script, i.e. runMainRecon.m, reconstructs one BRDF at a time. Therefore, lines 15 and 17 in runMainRecon.m should be changed for each BRDF you would like to reconstruct. 
+Running the scripts without change will reconstruct gold-metallic-paint2 with 20 optimally placed samples, producing the FROST-BRDF results for this material in Fig. 8 of the paper.
 
 The scripts provided can be used for reproducing all the figures in the paper and also in the supplementary. The only parameter is the number of samples, i.e. "npca" in line 5 of "runMainOptimization.m". In the paper, this parameter is denoted by _m_. Change this parameter accordingly for each experiment. For example, for Fig. 4 we used npca=10, while for Fig. 8 we used npca=20. Note that when the number of samples changes, the optimal sample direction have to be recomputed; i.e. one has to run "createUSVfromTrainingData.m" and "runMainOptimization.m".
 

@@ -9,10 +9,11 @@ allMats{4} = './data/MERL_logrelative_weight.mat';
 allMats{5} = './data/maskmap-nan-EPFL-DTUordering.mat';
 allMats{6} = './dataMatlab/log_relative/USV.mat';
 
+mkdir('./recon');
 % set reconstruction file 
 reconFile = './recon/test.binary';
 
-matname = 'alum-bronze'
+matname = 'gold-metallic-paint2'
 
 binpath = './BRDFs_Mat/MERL/HD/no_transform';          
 mat_path = strcat(binpath, '/', matname,'.mat'); 
