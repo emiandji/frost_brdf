@@ -20,8 +20,9 @@ Since the training is done once, the scripts createTrainingData.m, createUSVfrom
 
 The reconstruction script, i.e. runMainRecon.m, reconstructs one BRDF at a time. Therefore, lines 15 and 17 in runMainRecon.m should be changed for each BRDF you would like to reconstruct. 
 Running the scripts without change will reconstruct gold-metallic-paint2 with 20 optimally placed samples, producing the FROST-BRDF results for this material in Fig. 8 of the paper. 
+
 Note that this repository does not include the rendering code. We used PBRT v2 to produce the rendering results in the paper. The convenience functions "merlWriter.m" and "reshape2merlwriter.m" can be used for writing MERL binary files from the reconstructed BRDF to be used by PBRT for rendering. 
-The PBRT v2 scene file together with the environment map we used (Grace Cathedral) are included in directory PBRT.
+The PBRT v2 scene file together with the environment map we used (Grace Cathedral) are included in directory PBRT. Place the reconstructed BRDF, together with the compiled executable of PBRT, in the PBRT directory. The current scene file will render gold-metallic-paint2. Change the scene file for each BRDF you want to render.
 
 The scripts provided can be used for reproducing all the figures in the paper and also in the supplementary. The only parameter is the number of samples, i.e. "npca" in line 5 of "runMainOptimization.m". In the paper, this parameter is denoted by _m_. Change this parameter accordingly for each experiment. For example, for Fig. 4 we used npca=10, while for Fig. 8 we used npca=20. Note that when the number of samples changes, the optimal sample direction have to be recomputed; i.e. one has to run "createUSVfromTrainingData.m" and "runMainOptimization.m".
 
@@ -51,13 +52,6 @@ To reproduce the FROST-BRDF result in Fig. 4, follow these steps:
 4. Run the scripts in the order specified above (in section "Code").
 
 For more sophisticated figures, e.g. Figure 3, one has to write loops to run FROST-BRDF for all test BRDFs and number of samples.
-
-We also provide an example of a PBRT file.
-The 'test.pbrt' will generate an output file, 'test.exr'.
-The required directories are as follows.
-- 'exr' : to hold the rendered output.
-- 'brdf' : to put the reconstructed binary from FROST.
-- 'textures' : to put the environment map, 'grace_latlong_pbrt.exr'
 
 -----------------------------------------------------------------------------------------------------
 

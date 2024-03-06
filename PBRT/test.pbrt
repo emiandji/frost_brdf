@@ -1,0 +1,21 @@
+LookAt 200 250 0   0 0 0   0 0 1
+Camera "perspective" "float fov" [80]
+Film "image"
+	"integer xresolution" [512] "integer yresolution" [512]
+"string filename" ["test.exr"]
+Sampler "lowdiscrepancy" "integer pixelsamples" [512]
+PixelFilter "box"
+SurfaceIntegrator "directlighting"
+WorldBegin
+AttributeBegin
+Rotate 180 1 0 0
+LightSource "infinite" "integer nsamples" [256] "color L" [58 58 58]
+	"string mapname" ["grace_latlong_pbrt.exr"]
+AttributeEnd
+
+AttributeBegin
+Material "measured" "string filename" "gold-metallic-paint2.binary"
+Translate 0 0 0
+Shape "sphere" "float radius" [180]
+AttributeEnd
+WorldEnd
