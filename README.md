@@ -34,7 +34,9 @@ The BRDFs we used for training and testing in the paper can be downloaded from
 
 https://drive.google.com/file/d/18j-I-JkJAFaUyDtHnsaOBsQav1gPTPY8/view?usp=sharing
 
-The zip file contains MATLAB's mat files for MERL, EPFL, and DTU data sets. There are two folders in the zip file: "BRDFs_Mat_for_train" and "BRDFs_MAT". Extract the zip file and place the two folders in the root folder of the repository. 
+The zip file contains MATLAB's mat files for MERL, EPFL, and DTU data sets. Please cite the relevant work when you use these datasets. 
+
+There are two folders in the zip file: "BRDFs_Mat_for_train" and "BRDFs_MAT". Extract the zip file and place the two folders in the root folder of the repository. 
 
 The folder "BRDFs_Mat_for_train" contains training BRDFs. 
 
